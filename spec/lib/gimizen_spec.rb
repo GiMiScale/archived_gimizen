@@ -26,7 +26,6 @@ describe Gimizen do
   it 'creates a zendesk ticket' do
     VCR.use_cassette('create_ticket') do
       response = Gimizen.create_ticket({subject: 'Gimizen', comment: 'This is a test ticket'})
-      puts response
       response.should_not         eq nil
       response.created.should_not eq nil
       response.created.should     eq true
