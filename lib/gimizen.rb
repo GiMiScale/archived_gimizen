@@ -62,9 +62,7 @@ module Gimizen
 
   def self.succes_message(response_code)
     # Format status message
-    status_message = {
-      created: true
-    }
+    status_message = {created: true}
     # Change hash if tickets was nit created
     status_message[:created] = false if response_code != 201
     # Return status message
