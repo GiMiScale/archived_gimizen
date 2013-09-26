@@ -6,7 +6,7 @@ require 'gimizen/version'
 
 module Gimizen
   class << self
-    attr_accessor :api_url, :api_key
+    attr_accessor :domain, :email_address, :api_token
     def configure(&blk); class_eval(&blk); end
   end
 
