@@ -38,13 +38,10 @@ Simple Zendesk ticket creation:
     response.created
     # => true
 
-Create a Zendesk ticket and receive the response:
+Create a Zendesk ticket with response body:
 
     response = Gimizen.create_ticket({subject: 'Gimizen', comment: 'This is a test ticket'}, true)
     # => #<OpenStruct url="https://gimiscale.zendesk.com/api/v2/tickets/942.json", id=942, external_id=nil, via={:channel=>"api", :source=>{:from=>{}, :to=>{}, :rel=>nil}}, created_at="2013-09-25T13:13:54Z", updated_at="2013-09-25T13:13:54Z", type=nil, subject="Gimizen", description="This is a test ticket", priority=nil, status="new", recipient=nil, requester_id=275909116, submitter_id=275909116, assignee_id=nil, organization_id=nil, group_id=20329092, collaborator_ids=[], forum_topic_id=nil, problem_id=nil, has_incidents=false, due_at=nil, tags=["gimiscale"], custom_fields=[], satisfaction_rating=nil, sharing_agreement_ids=[], fields=[]>
-
-You can then use:
-
     response.id
     # => 942
     response.subject
