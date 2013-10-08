@@ -6,6 +6,7 @@ require 'gimizen/version'
 Gem::Specification.new do |gem|
   gem.name          = 'gimizen'
   gem.version       = Gimizen::VERSION
+  gem.license       = 'MIT'
   gem.authors       = ['GiMiScale', 'Nick den Engelsman']
   gem.email         = ['nick.denengelsman@gimiscale.com']
   gem.description   = %q{API wrapper for Zendesk}
@@ -16,8 +17,9 @@ Gem::Specification.new do |gem|
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.require_paths = ['lib']
+  gem.post_install_message = 'Thanks for installing!'
 
-  gem.add_runtime_dependency 'httparty', '~> 0.11.0'
+  gem.add_runtime_dependency 'httparty', '~> 0.8.3'
   gem.add_runtime_dependency 'json', '~> 1.8.0'
   gem.add_runtime_dependency 'hash_symbolizer', '~> 1.0.1'
   
