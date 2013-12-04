@@ -6,7 +6,7 @@ require 'gimizen/version'
 Gem::Specification.new do |gem|
   gem.name          = 'gimizen'
   gem.version       = Gimizen::VERSION
-  gem.license       = 'MIT'
+  gem.license       = 'Apache License, Version 2.0'
   gem.authors       = ['GiMiScale', 'Nick den Engelsman']
   gem.email         = ['nick.denengelsman@gimiscale.com']
   gem.description   = %q{API wrapper for Zendesk}
